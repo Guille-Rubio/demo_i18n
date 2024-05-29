@@ -10,28 +10,23 @@ https://medium.com/how-to-react/setup-multilingual-in-react-js-using-i18n-module
     Create a json for each language translation 
     `touch src/locales/en/translation.json src/locales/es/translation.json`
 
-5. Add translations 
-```json
-//es/translation.json
-//Spanish translation
-{
-    "name": "Name",
-    "table": "mesa"
-}
-```
+5. create translation files as json 
+
+`es/translation.json`
+`en/translation.json`
 
 ```json
-//en/translation.json 
-//English translation
 {
-    "name": "Name",
-    "table": "mesa"
+    "language": "English",
+    "selectLanguage":"Select your language",
+    "articles": [
+      {
+        "heading": "Proven facts. Is the economy doing well or badly? ",
+        "subheading": "Apocalyptic forecasts about"
+    }
+    ]
 }
-```
-
-
-
-    
+``` 
 
 
 6. Import i18n en `main.jsx`
@@ -63,6 +58,6 @@ const { t, i18n } = useTranslation();
 //TODO ADD CONTEXT
 
 
-### Intersting tools 
+### Interesting tools 
 
 [Traductor JSON i18n](https://translate.i18next.com/)
